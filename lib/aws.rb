@@ -13,21 +13,21 @@ require 'rubygems'
 require 'right_http_connection'
 
 $:.unshift(File.dirname(__FILE__))
-require 'awsbase/require_relative'
-require 'awsbase/benchmark_fix'
-require 'awsbase/awsbase'
-require 'awsbase/aws_response_array'
-require 'ec2/ec2'
-require 'ec2/mon_interface'
-require 's3/s3_interface'
-require 's3/s3'
-require 'sqs/sqs_interface'
-require 'sqs/sqs'
-require 'sdb/sdb_interface'
-require 'acf/acf_interface'
-require 'elb/elb_interface'
-require 'rds/rds'
-require 'iam/iam'
-require 'ses/ses'
+require File.expand_path('awsbase/require_relative', File.dirname(__FILE__))
+require File.expand_path('awsbase/benchmark_fix', File.dirname(__FILE__))
+require File.expand_path('awsbase/awsbase', File.dirname(__FILE__))
+require File.expand_path('awsbase/aws_response_array', File.dirname(__FILE__))
+require File.expand_path('ec2/ec2', File.dirname(__FILE__))
+require File.expand_path('ec2/mon_interface', File.dirname(__FILE__))
+require File.expand_path('s3/s3_interface', File.dirname(__FILE__))
+require File.expand_path('s3/s3', File.dirname(__FILE__))
+require File.expand_path('sqs/sqs_interface', File.dirname(__FILE__))
+require File.expand_path('sqs/sqs', File.dirname(__FILE__))
+require File.expand_path('sdb/sdb_interface', File.dirname(__FILE__))
+require File.expand_path('acf/acf_interface', File.dirname(__FILE__))
+require File.expand_path('elb/elb_interface', File.dirname(__FILE__))
+require File.expand_path('rds/rds', File.dirname(__FILE__))
+require File.expand_path('iam/iam', File.dirname(__FILE__))
+require File.expand_path('ses/ses', File.dirname(__FILE__))
 
 

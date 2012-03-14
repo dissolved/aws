@@ -30,9 +30,9 @@ module Aws
   require 'xmlsimple'
   require 'net/http'
 
-  require_relative 'utils'
-  require_relative 'errors'
-  require_relative 'parsers'
+  require File.expand_path('utils', File.dirname(__FILE__))
+  require File.expand_path('errors', File.dirname(__FILE__))
+  require File.expand_path('parsers', File.dirname(__FILE__))
 
 
   class AwsBenchmarkingBlock #:nodoc:
@@ -260,11 +260,11 @@ module Aws
       conn_mode = lib_params[:connection_mode]
 
       params = { :exception => AwsError, :logger => logger }
-      
+
       # Adds all parameters accepted by Rightscale::HttpConnection#new
-      [ :user_agent, :ca_file, :http_connection_retry_count, 
-        :http_connection_open_timeout, :http_connection_read_timeout, 
-        :http_connection_retry_delay 
+      [ :user_agent, :ca_file, :http_connection_retry_count,
+        :http_connection_open_timeout, :http_connection_read_timeout,
+        :http_connection_retry_delay
       ].each do |key|
         params[key] = lib_params[key] if lib_params.has_key?(key)
       end

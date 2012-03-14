@@ -1,4 +1,4 @@
-require_relative "../awsbase/awsbase"
+require File.expand_path('../awsbase/awsbase', File.dirname(__FILE__))
 module Aws
 
   require 'xmlsimple'
